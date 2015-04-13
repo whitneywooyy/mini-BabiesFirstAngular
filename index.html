@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="friendsList">
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body ng-controller="mainCtrl">
+	<h1>My Friends</h1>
+	<div ng-repeat="friend in friends">
+		<ul>
+			<li>{{friend}}</li>
+		</ul>
+	</div>
+	<div>
+	Add Friend:
+	<input type="text" ng-model="friendToAdd" />
+	<button ng-click="addFriend()">Add Friend</button>
+	<div ng-bind="errorMessage">{{errorMessage}}	<!-- Doesn't work -->
+	</div>
+
+	<script src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/mainCtrl.js"></script>
+</body>
+</html>
